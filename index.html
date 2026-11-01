@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PapaDanny Privacy Policy</title>
+<style>
+  :root { --bg: #ffffff; --text: #1f2328; --muted: #59636e; --border: #d1d9e0; --accent: #5865f2; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171d; --text: #e6e7eb; --muted: #9a9ca5; --border: #2e3038; --accent: #8b95ff; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>PapaDanny Privacy Policy</h1>
+<p class="meta">Effective 2 November 2026</p>
+
+<p>PapaDanny is a private Discord bot used by the management team of a single Discord server to review the
+quality of the server's support staff. It is not available publicly and is not added to other servers.
+This policy explains what data PapaDanny processes, why, and how long it is kept.</p>
+
+<h2>What data PapaDanny processes</h2>
+<p>When a support ticket in our server is closed, our ticket bot posts a text transcript of that ticket into a
+staff-only log channel. PapaDanny reads those transcript files and nothing else. A transcript contains:</p>
+<ul>
+  <li>the messages sent in the ticket by the member who opened it, by support staff, and by the ticket bot;</li>
+  <li>Discord usernames, display names and user IDs of the people in the ticket;</li>
+  <li>the ticket ID, the game the ticket was about, timestamps, and why the ticket was closed.</li>
+</ul>
+
+<h2>What PapaDanny does not collect</h2>
+<ul>
+  <li>It does not read messages in any channel other than the three staff-only transcript channels.</li>
+  <li>In those channels it only reads transcript files posted by our ticket bot. It ignores every other message.</li>
+  <li>It does not read direct messages, member lists, online status or activity.</li>
+</ul>
+
+<h2>How the data is used</h2>
+<p>Only to help server management review support staff. PapaDanny calculates things like how long members
+waited for help and how quickly staff replied, flags messages where staff seemed unsure or members thanked
+them, and produces per-ticket reviews and a monthly audit of each staff member. These are posted only in
+private, management-only channels. AI scores are treated as a signal for a human reviewer, never as an
+automatic decision.</p>
+<p>The data is not used to make decisions about members who opened tickets, and it is never used to train
+AI or machine-learning models.</p>
+
+<h2>AI processing</h2>
+<p>To score staff replies for tone, accuracy and professionalism, the conversation from a ticket is sent to
+Google's Gemini API. Before it is sent, PapaDanny removes Discord user IDs, mentions, links, attachment URLs
+and activation codes, and labels the member who opened the ticket only as "CUSTOMER". We use a paid Gemini API
+tier, under which Google does not use submitted data to train its models. Google's handling of this data is
+described in the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms of Service</a>.</p>
+
+<h2>Storage and retention</h2>
+<ul>
+  <li>Data is stored in a private database on our bot hosting provider and is accessible only to server management.</li>
+  <li>The full transcript text and quoted messages are automatically deleted 60 days after the ticket was opened.</li>
+  <li>After that, only numbers (such as response times and message counts), AI scores and one-sentence AI
+      review notes remain, so staff performance can be compared over time.</li>
+</ul>
+
+<h2>Sharing</h2>
+<p>We do not sell, rent or publish this data. It is shared only with the services needed to run the bot:
+Discord, our bot hosting provider, and Google's Gemini API as described above.</p>
+
+<h2>Your choices</h2>
+<p>You can ask to see or delete data PapaDanny holds about you by opening a support ticket in our Discord
+server and asking for the server management team. We will respond within 30 days.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we will update this page and the date at the top.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be raised through a support ticket in our Discord server.</p>
+</main>
+</body>
+</html>
