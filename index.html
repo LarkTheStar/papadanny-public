@@ -50,15 +50,20 @@ waited for help and how quickly staff replied, flags messages where staff seemed
 them, and produces per-ticket reviews and a monthly audit of each staff member. These are posted only in
 private, management-only channels. AI scores are treated as a signal for a human reviewer, never as an
 automatic decision.</p>
-<p>The data is not used to make decisions about members who opened tickets, and it is never used to train
-AI or machine-learning models.</p>
+<p>The data is not used to make decisions about members who opened tickets, and we never use it to train
+AI or machine-learning models (see "AI processing" for how Google may use what it receives).</p>
 
 <h2>AI processing</h2>
 <p>To score staff replies for tone, accuracy and professionalism, the conversation from a ticket is sent to
-Google's Gemini API. Before it is sent, PapaDanny removes Discord user IDs, mentions, links, attachment URLs
-and activation codes, and labels the member who opened the ticket only as "CUSTOMER". We use a paid Gemini API
-tier, under which Google does not use submitted data to train its models. Google's handling of this data is
-described in the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms of Service</a>.</p>
+Google's Gemini API. Before it is sent, PapaDanny removes Discord user IDs, usernames, display names, mentions,
+links, attachment URLs and activation codes. Everyone in the ticket is identified only by their role
+("CUSTOMER", "ACTIVATOR"). The text of the messages themselves is sent as written, so avoid sharing personal
+information in support tickets.</p>
+<p>We use the free tier of the Gemini API. Under Google's terms for this tier, Google may use the content it
+receives to provide and improve its products and services, including its machine-learning technology, and
+human reviewers at Google may read it. PapaDanny itself never uses this data to train any AI model. Google's
+handling of this data is described in the
+<a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms of Service</a>.</p>
 
 <h2>Storage and retention</h2>
 <ul>
@@ -71,6 +76,8 @@ described in the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Ter
 <h2>Sharing</h2>
 <p>We do not sell, rent or publish this data. It is shared only with the services needed to run the bot:
 Discord, our bot hosting provider, and Google's Gemini API as described above.</p>
+<p>If you would rather your ticket conversations were not sent to Google, tell the management team through a
+support ticket.</p>
 
 <h2>Your choices</h2>
 <p>You can ask to see or delete data PapaDanny holds about you by opening a support ticket in our Discord
